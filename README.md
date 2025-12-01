@@ -1,97 +1,93 @@
-# SRM Unigram — Backend
+# SRM Unigram — Frontend
 
-This is the backend repository for **SRM Unigram**, a full-stack social media platform built exclusively for SRM students & faculty.  
-It allows students & faculty to share photos, professional posts, events, certifications, and news — all in one place.
+This is the frontend repository for **SRM Unigram**, a full-stack social media platform built exclusively for SRM students & faculty.  
+The frontend delivers a clean, responsive, and interactive UI where students & faculty can share photos, professional posts, events, certifications, and news — all in one place.
 
-The backend handles:
-- Authentication
-- Post management
-- Secure student verification
-- All server-side logic
+The frontend handles:
+- User interface & layout
+- Post creation UI
+- Feed rendering
+- API communication with backend
+- Secure session handling with JWT
 
 ---
 
 ## Core Responsibilities
-- Strict SRM email–based authentication (signup, login)
-- OTP verification system (Mailjet)
-- JWT-based session handling
-- Secure password hashing with **bcrypt**
-- Handling three categories of posts:
+- Built with **React.js**
+- Global feed combining posts from all SRM students & faculty
+- UI for three categories of posts:
   - Photo posts (Instagram-style)
   - Professional posts (LinkedIn-style)
   - Text/news posts (Twitter-style)
-- Feed system combining all SRM students (no department-wise feeds)
-- Protected routes with auth middleware
-- MySQL database integration
+- SRM email–protected login & signup pages
+- OTP verification UI
+- JWT-based protected routes
+- Responsive design for mobile, tablet, and desktop
+- Smooth animations & modern UX interactions
+- Image upload interface (for photo posts)
 
 ---
 
-## API Endpoints
+## Features
 
-### Auth
-- `POST /api/auth/signup` → Register new SRM student  
-- `POST /api/auth/login` → Login and receive JWT  
-- `POST /api/auth/verify-otp` → Verify SRM email OTP  
-- `POST /api/auth/resend-otp` → Resend OTP  
+### Authentication
+- Signup using SRM email address  
+- OTP verification screen  
+- Login with secure token storage (`localStorage` / `sessionStorage`)  
 
-### Users
-- `GET /api/user/profile` → Get user data  
-- `PUT /api/user/update` → Update profile details  
-
-> All user routes require `Authorization: Bearer <token>`
+### Feed
+- Combined SRM-wide feed  
+- Auto-refreshing timeline  
+- View photos, professional posts, and news posts  
 
 ### Posts
-- `POST /api/posts/create` → Create a new post  
-- `GET /api/posts/feed` → Fetch global SRM feed  
-- `GET /api/posts/:id` → Fetch single post details  
+- Create photo posts, professional posts, or thought/news posts  
+- Edit and delete own posts (if enabled)  
+- View individual post details  
 
-Supports:
-- Photo posts  
-- Professional posts  
-- Thought/news posts  
+### Interactions
+- Like/Unlike posts  
+- Comment on posts  
+- View comments  
 
-### Interaction
-- `POST /api/posts/like/:id` → Like/Unlike a post  
-- `POST /api/posts/comment/:id` → Comment on a post  
-- `GET /api/posts/comments/:id` → Fetch comments  
+### User Profile
+- View profile information  
+- Edit profile details  
+- View posts created by user  
 
 ---
 
 ## Technologies Used
-- Node.js + Express.js  
-- MySQL (**mysql2**)  
-- JWT for authentication  
-- Bcrypt for password hashing  
-- Mailjet for OTP-delivered email verification  
-- Multer / Cloud Storage for images (if used)  
-- Render for backend deployment  
+- React.js (Vite or CRA depending on setup)  
+- React Router for navigation  
+- Axios for API communication  
+- Context API / Redux (if used)  
+- Tailwind CSS / CSS Modules (depending on choice)  
+- Cloud storage support for images (if applicable)  
+
+---
 
 ---
 
 ## Security & Verification
-- Only SRM university email IDs can create accounts  
-- Passwords are hashed before storing  
-- OTP verification ensures no outsider can access the platform  
-- JWT-protected private routes  
-- Clean database structure with traceable student IDs
-
----
-
-## Deployment
-- Backend is deployed on **Render**  
-- Push changes → manually trigger a deployment from the Render dashboard  
+- Only verified **SRM email users** can access the dashboard  
+- **JWT** is stored securely and validated on protected routes  
+- Sensitive pages are blocked without authentication  
+- No unauthorized user can access:
+  - Feed  
+  - Profile  
+  - Post creation  
 
 ---
 
 ## Developer
-**Kevin Antony** — Full-stack Developer & Creator of SRM Unigram  
-*Domain: Full Stack Web Development (SRM University, Ramapuram)*  
+**Kevin Antony**  
+*Full-stack Developer & Creator of SRM Unigram*   
 
 ---
 
 ## License
-Backend code © 2025 **Kevin Antony**  
+Frontend code © 2025 **Kevin Antony**  
 All rights reserved. Redistribution or replication is not permitted without written consent.  
 
-The SRM logo is the property of **SRM Institute of Science and Technology** and is used under permission for official purposes only.
-
+The **SRM logo** is the property of **SRM Institute of Science and Technology** and is used under permission for official purposes only.
