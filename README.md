@@ -57,7 +57,7 @@ Supports:
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 - Node.js + Express.js  
 - MySQL (**mysql2**)  
 - JWT for authentication  
