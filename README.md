@@ -1,7 +1,7 @@
 # SRM Unigram — Frontend
 
-This is the frontend repository for **SRM Unigram**, a full-stack social media platform built exclusively for SRM students & faculty.  
-The frontend delivers a clean, responsive, and interactive UI where students & faculty can share photos, professional posts, events, certifications, and news — all in one place.
+**SRM Unigram** is a full-stack social media platform built exclusively for SRM students & faculty.  
+It delivers a clean, responsive, and interactive UI where students & faculty can share photos, professional posts, events, certifications, and news — all in one place.
 
 The frontend handles:
 - User interface & layout
