@@ -67,8 +67,6 @@ The frontend handles:
 
 ---
 
----
-
 ## Security & Verification
 - Only verified **SRM email users** can access the dashboard  
 - **JWT** is stored securely and validated on protected routes  
