@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# SRM Unigram — Backend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the backend repository for **SRM Unigram**, a full-stack social platform built exclusively for SRM students.  
+Inspired by Instagram, LinkedIn, and Twitter, SRM Unigram allows students to share photos, professional posts, thoughts, and news — all in one place.
 
-## Available Scripts
+The backend handles:
+- Authentication
+- Post management
+- Secure student verification
+- All server-side logic
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Core Responsibilities
+- Strict SRM email–based authentication (signup, login)
+- OTP verification system (Mailjet)
+- JWT-based session handling
+- Secure password hashing with **bcrypt**
+- Handling three categories of posts:
+  - Photo posts (Instagram-style)
+  - Professional posts (LinkedIn-style)
+  - Text/news posts (Twitter-style)
+- Feed system combining all SRM students (no department-wise feeds)
+- Protected routes with auth middleware
+- MySQL database integration
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## API Endpoints
 
-### `npm test`
+### Auth
+- `POST /api/auth/signup` → Register new SRM student  
+- `POST /api/auth/login` → Login and receive JWT  
+- `POST /api/auth/verify-otp` → Verify SRM email OTP  
+- `POST /api/auth/resend-otp` → Resend OTP  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Users
+- `GET /api/user/profile` → Get user data  
+- `PUT /api/user/update` → Update profile details  
 
-### `npm run build`
+> All user routes require `Authorization: Bearer <token>`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Posts
+- `POST /api/posts/create` → Create a new post  
+- `GET /api/posts/feed` → Fetch global SRM feed  
+- `GET /api/posts/:id` → Fetch single post details  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Supports:
+- Photo posts  
+- Professional posts  
+- Thought/news posts  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Interaction
+- `POST /api/posts/like/:id` → Like/Unlike a post  
+- `POST /api/posts/comment/:id` → Comment on a post  
+- `GET /api/posts/comments/:id` → Fetch comments  
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠 Technologies Used
+- Node.js + Express.js  
+- MySQL (**mysql2**)  
+- JWT for authentication  
+- Bcrypt for password hashing  
+- Mailjet for OTP-delivered email verification  
+- Multer / Cloud Storage for images (if used)  
+- Render for backend deployment  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Security & Verification
+- Only SRM university email IDs can create accounts  
+- Passwords are hashed before storing  
+- OTP verification ensures no outsider can access the platform  
+- JWT-protected private routes  
+- Clean database structure with traceable student IDs
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Deployment
+- Backend is deployed on **Render**  
+- Push changes → manually trigger a deployment from the Render dashboard  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Developer
+**Kevin Antony** — Full-stack Developer & Creator of SRM Unigram  
+*Domain: Full Stack Web Development (SRM University, Ramapuram)*  
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
+Backend code © 2025 **Kevin Antony**  
+All rights reserved. Redistribution or replication is not permitted without written consent.  
 
-### Analyzing the Bundle Size
+The SRM logo is the property of **SRM Institute of Science and Technology** and is used under permission for official purposes only.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📂 Project Structure (Backend)
