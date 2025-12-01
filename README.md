@@ -95,6 +95,3 @@ All rights reserved. Redistribution or replication is not permitted without writ
 
 The SRM logo is the property of **SRM Institute of Science and Technology** and is used under permission for official purposes only.
 
----
-
-## 📂 Project Structure (Backend)
