@@ -1,7 +1,7 @@
 # SRM Unigram — Backend
 
-This is the backend repository for **SRM Unigram**, a full-stack social platform built exclusively for SRM students.  
-Inspired by Instagram, LinkedIn, and Twitter, SRM Unigram allows students to share photos, professional posts, thoughts, and news — all in one place.
+This is the backend repository for **SRM Unigram**, a full-stack social media platform built exclusively for SRM students & faculty.  
+It allows students & faculty to share photos, professional posts, events, certifications, and news — all in one place.
 
 The backend handles:
 - Authentication
