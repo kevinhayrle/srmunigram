@@ -90,7 +90,7 @@ export default function ForgotPassword() {
         </>
       ) : (
         <>
-          <div className="instruction-text">Enter the OTP and your new password</div>
+          <div className="instruction-text">Check your spam or junk folder for OTP</div>
           <input
             className="input-field2"
             type="text"

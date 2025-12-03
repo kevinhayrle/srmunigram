@@ -103,7 +103,7 @@ const Signup = () => {
           {statusMessage}
         </div>
       )}
-
+<div className="note">Do not include "@srmist.edu.in" in the email field</div>
       <div className="or-text">OR</div>
       <Link to="/login" className="signup-link">
         Already have an account? Log in

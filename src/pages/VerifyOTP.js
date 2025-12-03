@@ -47,7 +47,7 @@ export default function VerifyOTP() {
       </div>
 
       <div className="instruction-text">
-        Check your inbox for the OTP
+        Check your spam or junk folder for OTP
       </div>
 
       <input
