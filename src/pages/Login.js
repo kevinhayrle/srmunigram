@@ -96,6 +96,7 @@ const Login = () => {
         </div>
       )}
 
+<div className="note">Do not include @srmist.edu.in</div>
       {/* Links */}
       <Link to="/forgot" className="forgotpassword-link">
         Forgot password?
