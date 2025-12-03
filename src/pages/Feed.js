@@ -204,6 +204,7 @@ export default function Feed() {
             onCommentsUpdated={(updatedComments) => handlePostComments(p._id, updatedComments, p.userId)}
           />
         ))}
+        <div className="cortex">© 2025 cortex²</div>
       </div>
 
       {/* ---------- FOOTER ---------- */}
