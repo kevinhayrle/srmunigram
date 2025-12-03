@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# SRM Unigram — Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**SRM Unigram** is a dedicated social media platform built exclusively for SRM students & faculty.  
+This is the frontend repository of SRM Unigram which delivers a clean, responsive, and interactive UI where students & faculty can share photos, professional posts, events, certifications, and news — all in one place.
 
-## Available Scripts
+The frontend handles:
+- User interface & layout
+- Post creation UI
+- Feed rendering
+- API communication with backend
+- Secure session handling with JWT
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Core Responsibilities
+- Built with **React.js**
+- Global feed combining posts from all SRM students & faculty
+- UI for three categories of posts:
+  - Photo posts (Instagram-style)
+  - Professional posts (LinkedIn-style)
+  - Text/news posts (Twitter-style)
+- SRM email–protected login & signup pages
+- OTP verification UI
+- JWT-based protected routes
+- Responsive design for mobile, tablet, and desktop
+- Smooth animations & modern UX interactions
+- Image upload interface (for photo posts)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+### Authentication
+- Signup using SRM email address  
+- OTP verification screen  
+- Login with secure token storage (`localStorage` / `sessionStorage`)  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Feed
+- Combined SRM-wide feed  
+- Auto-refreshing timeline  
+- View photos, professional posts, and news posts  
 
-### `npm run build`
+### Posts
+- Create photo posts, professional posts, or thought/news posts  
+- Edit and delete own posts (if enabled)  
+- View individual post details  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Interactions
+- Like/Unlike posts  
+- Comment on posts  
+- View comments  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### User Profile
+- View profile information  
+- Edit profile details  
+- View posts created by user  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Technologies Used
+- React.js (Vite or CRA depending on setup)  
+- React Router for navigation  
+- Axios for API communication  
+- Context API / Redux (if used)  
+- Tailwind CSS / CSS Modules (depending on choice)  
+- Cloud storage support for images (if applicable)  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Security & Verification
+- Only verified **SRM email users** can access the dashboard  
+- **JWT** is stored securely and validated on protected routes  
+- Sensitive pages are blocked without authentication  
+- No unauthorized user can access:
+  - Feed  
+  - Profile  
+  - Post creation  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Developer
+**Kevin Antony**  
+*Full-stack Developer & Creator of SRM Unigram*   
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
+Frontend code © 2025 **Kevin Antony**  
+All rights reserved. Redistribution or replication is not permitted without written consent.  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The **SRM logo** is the property of **SRM Institute of Science and Technology** and is used under permission for official purposes only.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Live Site
+https://srmunigram.vercel.app
